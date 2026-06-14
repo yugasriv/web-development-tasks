@@ -1,39 +1,54 @@
-body{
-    font-family:Arial;
-    background:#f4f4f4;
-    display:flex;
-    justify-content:center;
-    align-items:center;
-    height:100vh;
+document.getElementById("myForm").addEventListener("submit", function(e){
+
+e.preventDefault();
+
+let name=document.getElementById("name").value.trim();
+let email=document.getElementById("email").value.trim();
+let age=document.getElementById("age").value.trim();
+let phone=document.getElementById("phone").value.trim();
+let gender=document.getElementById("gender").value;
+let address=document.getElementById("address").value.trim();
+
+let result=document.getElementById("result");
+
+if(name===""){
+result.innerHTML="<p style='color:red'>Name is required</p>";
+return;
 }
 
-.container{
-    background:white;
-    padding:30px;
-    width:400px;
-    border-radius:10px;
-    box-shadow:0 0 10px gray;
+if(!email.includes("@")){
+result.innerHTML="<p style='color:red'>Enter valid email</p>";
+return;
 }
 
-.step{
-    display:none;
+if(age<18){
+result.innerHTML="<p style='color:red'>Age must be 18 or above</p>";
+return;
 }
 
-.active{
-    display:block;
+if(phone.length!==10){
+result.innerHTML="<p style='color:red'>Phone number must be 10 digits</p>";
+return;
 }
 
-input,select,textarea{
-    width:100%;
-    padding:10px;
-    margin:10px 0;
+if(gender===""){
+result.innerHTML="<p style='color:red'>Select gender</p>";
+return;
 }
 
-button{
-    width:100%;
-    padding:10px;
-    border:none;
-    background:#007bff;
-    color:white;
-    cursor:pointer;
-}
+result.innerHTML=`
+<h2 style="color:green;">Registration Successful</h2>
+
+<p><b>Name:</b> ${name}</p>
+
+<p><b>Email:</b> ${email}</p>
+
+<p><b>Age:</b> ${age}</p>
+
+<p><b>Phone:</b> ${phone}</p>
+
+<p><b>Gender:</b> ${gender}</p>
+
+<p><b>Address:</b> ${address}</p>
+`;
+});
