@@ -1,54 +1,32 @@
-document.getElementById("myForm").addEventListener("submit", function(e){
+function nextStep(step){
 
-e.preventDefault();
+    let steps=document.querySelectorAll(".step");
 
-let name=document.getElementById("name").value.trim();
-let email=document.getElementById("email").value.trim();
-let age=document.getElementById("age").value.trim();
-let phone=document.getElementById("phone").value.trim();
-let gender=document.getElementById("gender").value;
-let address=document.getElementById("address").value.trim();
+    steps.forEach(s=>{
+        s.classList.remove("active");
+    });
 
-let result=document.getElementById("result");
-
-if(name===""){
-result.innerHTML="<p style='color:red'>Name is required</p>";
-return;
+    document.getElementById("step"+step).classList.add("active");
 }
 
-if(!email.includes("@")){
-result.innerHTML="<p style='color:red'>Enter valid email</p>";
-return;
-}
+document.getElementById("myForm").addEventListener("submit",function(e){
 
-if(age<18){
-result.innerHTML="<p style='color:red'>Age must be 18 or above</p>";
-return;
-}
+    e.preventDefault();
 
-if(phone.length!==10){
-result.innerHTML="<p style='color:red'>Phone number must be 10 digits</p>";
-return;
-}
+    let name=document.getElementById("name").value;
+    let email=document.getElementById("email").value;
+    let age=document.getElementById("age").value;
+    let phone=document.getElementById("phone").value;
+    let gender=document.getElementById("gender").value;
+    let address=document.getElementById("address").value;
 
-if(gender===""){
-result.innerHTML="<p style='color:red'>Select gender</p>";
-return;
-}
-
-result.innerHTML=`
-<h2 style="color:green;">Registration Successful</h2>
-
-<p><b>Name:</b> ${name}</p>
-
-<p><b>Email:</b> ${email}</p>
-
-<p><b>Age:</b> ${age}</p>
-
-<p><b>Phone:</b> ${phone}</p>
-
-<p><b>Gender:</b> ${gender}</p>
-
-<p><b>Address:</b> ${address}</p>
-`;
+    document.getElementById("result").innerHTML=`
+        <h2>Registration Successful</h2>
+        <p>Name: ${name}</p>
+        <p>Email: ${email}</p>
+        <p>Age: ${age}</p>
+        <p>Phone: ${phone}</p>
+        <p>Gender: ${gender}</p>
+        <p>Address: ${address}</p>
+    `;
 });
