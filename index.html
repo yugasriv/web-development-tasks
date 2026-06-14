@@ -1,56 +1,65 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Multi Step Registration Form</title>
+    <meta charset="UTF-8">
+    <title>Task 2 - Multi Step Registration Form</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
 <div class="container">
 
-    <h1>Student Registration</h1>
+    <h1>Student Registration Form</h1>
+
+    <div class="progress">
+        <div class="progress-bar" id="progressBar"></div>
+    </div>
 
     <form id="myForm">
 
         <div class="step active" id="step1">
-            <h2>Step 1</h2>
-            <input type="text" id="name" placeholder="Enter Name">
+            <h2>Step 1 of 6</h2>
+            <input type="text" id="name" placeholder="Enter Full Name">
             <button type="button" onclick="nextStep(2)">Next</button>
         </div>
 
         <div class="step" id="step2">
-            <h2>Step 2</h2>
-            <input type="email" id="email" placeholder="Enter Email">
+            <h2>Step 2 of 6</h2>
+            <input type="email" id="email" placeholder="Enter Email Address">
             <button type="button" onclick="nextStep(3)">Next</button>
         </div>
 
         <div class="step" id="step3">
-            <h2>Step 3</h2>
+            <h2>Step 3 of 6</h2>
             <input type="number" id="age" placeholder="Enter Age">
             <button type="button" onclick="nextStep(4)">Next</button>
         </div>
 
         <div class="step" id="step4">
-            <h2>Step 4</h2>
+            <h2>Step 4 of 6</h2>
             <input type="tel" id="phone" placeholder="Enter Phone Number">
             <button type="button" onclick="nextStep(5)">Next</button>
         </div>
 
         <div class="step" id="step5">
-            <h2>Step 5</h2>
+            <h2>Step 5 of 6</h2>
+
             <select id="gender">
                 <option value="">Select Gender</option>
                 <option>Male</option>
                 <option>Female</option>
                 <option>Other</option>
             </select>
+
             <button type="button" onclick="nextStep(6)">Next</button>
         </div>
 
         <div class="step" id="step6">
-            <h2>Step 6</h2>
+            <h2>Step 6 of 6</h2>
+
             <textarea id="address" placeholder="Enter Address"></textarea>
-            <button type="submit">Submit</button>
+
+            <button type="submit">Register</button>
         </div>
 
     </form>
