@@ -1,5 +1,12 @@
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+}
+
 body{
 font-family:Arial,sans-serif;
+background:#f5f7ff;
 }
 
 .hero{
@@ -8,28 +15,77 @@ display:flex;
 flex-direction:column;
 justify-content:center;
 align-items:center;
-background:linear-gradient(135deg,#007bff,#00c6ff);
+text-align:center;
+color:white;
+background:linear-gradient(-45deg,#6a11cb,#2575fc,#ff512f,#dd2476);
+background-size:400% 400%;
+animation:gradient 8s ease infinite;
+}
+
+.hero h1{
+font-size:70px;
+font-weight:bold;
+animation:float 3s ease-in-out infinite;
+}
+
+.hero p{
+font-size:25px;
+margin:20px 0;
+}
+
+@keyframes gradient{
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+}
+
+@keyframes float{
+0%,100%{
+transform:translateY(0);
+}
+50%{
+transform:translateY(-15px);
+}
+}
+
+.glass-card{
+background:rgba(255,255,255,0.2);
+backdrop-filter:blur(10px);
+padding:30px;
+border-radius:20px;
+text-align:center;
+transition:0.4s;
+box-shadow:0 8px 20px rgba(0,0,0,0.2);
+}
+
+.glass-card:hover{
+transform:translateY(-10px) scale(1.05);
+}
+
+.stats{
+display:flex;
+justify-content:space-around;
+padding:60px;
+background:#111;
 color:white;
 text-align:center;
 }
 
-.hero h1{
-font-size:55px;
-animation:fadeIn 2s;
+.stats h2{
+font-size:45px;
 }
 
-.hero p{
-font-size:22px;
-margin-bottom:20px;
-}
-
-.card-hover{
+.team-card{
+background:white;
+padding:25px;
+border-radius:15px;
+text-align:center;
+box-shadow:0 5px 15px rgba(0,0,0,0.2);
 transition:0.4s;
 }
 
-.card-hover:hover{
-transform:translateY(-10px);
-box-shadow:0 10px 20px rgba(0,0,0,0.3);
+.team-card:hover{
+transform:scale(1.05);
 }
 
 footer{
@@ -39,25 +95,15 @@ text-align:center;
 padding:20px;
 }
 
-@keyframes fadeIn{
-from{
-opacity:0;
-transform:translateY(50px);
-}
-to{
-opacity:1;
-transform:translateY(0);
-}
-}
-
 @media(max-width:768px){
 
 .hero h1{
-font-size:35px;
+font-size:40px;
 }
 
-.hero p{
-font-size:18px;
+.stats{
+flex-direction:column;
+gap:30px;
 }
 
 }
