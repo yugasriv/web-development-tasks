@@ -1,162 +1,138 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 
-<title>Responsive Portfolio</title>
+<title>TechFest 2026</title>
 
 <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-
 <link rel="stylesheet" href="task3.css">
-
 </head>
 
 <body>
 
-<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
 <div class="container">
-
-<a class="navbar-brand" href="#">Yuga Portfolio</a>
+<a class="navbar-brand" href="#">TechFest 2026</a>
 
 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu">
 <span class="navbar-toggler-icon"></span>
 </button>
 
 <div class="collapse navbar-collapse" id="menu">
-
 <ul class="navbar-nav ms-auto">
-
-<li class="nav-item">
-<a class="nav-link" href="#home">Home</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#about">About</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#projects">Projects</a>
-</li>
-
-<li class="nav-item">
-<a class="nav-link" href="#contact">Contact</a>
-</li>
-
+<li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+<li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+<li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
+<li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
 </ul>
-
 </div>
-
 </div>
 </nav>
 
-<section id="home" class="hero">
-
-<h1>Welcome To My Portfolio</h1>
-
-<p>Full Stack Development Intern</p>
-
-<a href="#projects" class="btn btn-primary">
-View Projects
-</a>
-
+<section class="hero">
+<h1>TECHFEST 2026</h1>
+<p>The Future Starts Here</p>
+<button class="btn btn-warning btn-lg">Register Now</button>
 </section>
 
 <section id="about" class="container py-5">
-
-<h2 class="text-center mb-4">About Me</h2>
-
+<h2 class="text-center mb-4">About Event</h2>
 <p class="text-center">
-Passionate learner exploring HTML, CSS, JavaScript and Full Stack Development.
+TechFest 2026 brings together developers, designers, innovators and students
+for a day of learning, networking and innovation.
 </p>
-
 </section>
 
-<section id="projects" class="container py-5">
+<section id="events" class="container py-5">
+<h2 class="text-center mb-5">Featured Events</h2>
 
-<h2 class="text-center mb-5">Projects</h2>
-
-<div class="row">
+<div class="row g-4">
 
 <div class="col-md-4">
-
-<div class="card card-hover">
-
-<div class="card-body">
-
-<h5>Task 1</h5>
-
-<p>Registration Form</p>
-
+<div class="glass-card">
+<h3>Hackathon</h3>
+<p>24-hour coding challenge.</p>
 </div>
-
-</div>
-
 </div>
 
 <div class="col-md-4">
-
-<div class="card card-hover">
-
-<div class="card-body">
-
-<h5>Task 2</h5>
-
-<p>Multi Step Form</p>
-
+<div class="glass-card">
+<h3>AI Workshop</h3>
+<p>Learn AI and Machine Learning.</p>
 </div>
-
-</div>
-
 </div>
 
 <div class="col-md-4">
-
-<div class="card card-hover">
-
-<div class="card-body">
-
-<h5>Task 3</h5>
-
-<p>Responsive Portfolio</p>
-
+<div class="glass-card">
+<h3>Startup Pitch</h3>
+<p>Present innovative ideas.</p>
+</div>
 </div>
 
 </div>
+</section>
 
+<section class="stats">
+<div>
+<h2>500+</h2>
+<p>Participants</p>
+</div>
+
+<div>
+<h2>25+</h2>
+<p>Speakers</p>
+</div>
+
+<div>
+<h2>15+</h2>
+<p>Events</p>
+</div>
+</section>
+
+<section id="team" class="container py-5">
+<h2 class="text-center mb-5">Organizing Team</h2>
+
+<div class="row g-4">
+
+<div class="col-md-4">
+<div class="team-card">
+<h4>Yuga</h4>
+<p>Event Lead</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="team-card">
+<h4>Manya</h4>
+<p>Coordinator</p>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="team-card">
+<h4>Team Member</h4>
+<p>Volunteer Lead</p>
+</div>
 </div>
 
 </div>
-
 </section>
 
 <section id="contact" class="container py-5">
-
-<h2 class="text-center mb-4">Contact</h2>
+<h2 class="text-center mb-4">Contact Us</h2>
 
 <form>
-
-<input class="form-control mb-3" placeholder="Name">
-
+<input class="form-control mb-3" placeholder="Your Name">
 <input class="form-control mb-3" placeholder="Email">
-
 <textarea class="form-control mb-3" rows="4" placeholder="Message"></textarea>
-
-<button class="btn btn-success">
-Send Message
-</button>
-
+<button class="btn btn-success">Send</button>
 </form>
-
 </section>
 
 <footer>
-
-<p>
-© 2026 Yuga Portfolio
-</p>
-
+<p>© 2026 TechFest | Designed for Task 3</p>
 </footer>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
