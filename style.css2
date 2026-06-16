@@ -1,0 +1,63 @@
+body{
+font-family:Arial,sans-serif;
+}
+
+.hero{
+height:100vh;
+display:flex;
+flex-direction:column;
+justify-content:center;
+align-items:center;
+background:linear-gradient(135deg,#007bff,#00c6ff);
+color:white;
+text-align:center;
+}
+
+.hero h1{
+font-size:55px;
+animation:fadeIn 2s;
+}
+
+.hero p{
+font-size:22px;
+margin-bottom:20px;
+}
+
+.card-hover{
+transition:0.4s;
+}
+
+.card-hover:hover{
+transform:translateY(-10px);
+box-shadow:0 10px 20px rgba(0,0,0,0.3);
+}
+
+footer{
+background:#222;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+@keyframes fadeIn{
+from{
+opacity:0;
+transform:translateY(50px);
+}
+to{
+opacity:1;
+transform:translateY(0);
+}
+}
+
+@media(max-width:768px){
+
+.hero h1{
+font-size:35px;
+}
+
+.hero p{
+font-size:18px;
+}
+
+}
